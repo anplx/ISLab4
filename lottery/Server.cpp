@@ -229,7 +229,7 @@ void ClientHandler::userTicket(QByteArray&& data)
     int index = 0;
     for (let& word : words)
     {
-        if (index > Ticket::DataSize)  break;
+        if (index >= Ticket::DataSize)  break;
 
         auto ok = true;
         let num = word.toInt(&ok) % 256;
